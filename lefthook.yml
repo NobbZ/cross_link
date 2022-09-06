@@ -1,0 +1,13 @@
+---
+pre-commit:
+  parallel: true
+  commands:
+    format-ex:
+      glob: "*.{ex,exs}"
+      run: mix format --check {staged_files}
+    format-nix:
+      glob: "*.nix"
+      run: nix fmt -- --check {staged_files}
+    format-yml:
+      glob: "{.yamlfmt,*.yml,*.yaml}"
+      run: yamlfmt -lint
