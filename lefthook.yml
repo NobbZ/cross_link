@@ -4,7 +4,7 @@ pre-commit:
   commands:
     format-ex:
       glob: "*.{ex,exs}"
-      run: mix format --check {staged_files}
+      run: mix format --check-formatted {staged_files}
     format-nix:
       glob: "*.nix"
       run: nix fmt -- --check {staged_files}

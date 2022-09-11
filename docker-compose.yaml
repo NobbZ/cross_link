@@ -1,0 +1,13 @@
+---
+version: '3.1'
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: pass
+      POSTGRES_USER: user
+    volumes:
+      - ./.direnv/postgres:/var/lib/postgresql/data
+    ports:
+      - 55432:5432
