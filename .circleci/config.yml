@@ -16,7 +16,9 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - run:
-          command: apt-get install curl
+          command: |
+            apt-get update
+            apt-get install curl
       - nix/install
       - run:
           command: "nix --version"
