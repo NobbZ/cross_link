@@ -10,4 +10,4 @@ pre-commit:
       run: nix fmt -- --check {staged_files}
     format-yml:
       glob: "{.yamlfmt,*.yml,*.yaml}"
-      run: yamlfmt -lint
+      run: yamlfmt -lint {staged_files}
