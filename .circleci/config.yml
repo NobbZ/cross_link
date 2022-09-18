@@ -17,8 +17,8 @@ jobs:
     steps:
       - run:
           command: |
-            apt-get update
-            apt-get install --yes curl
+            sudo apt-get update
+            sudo apt-get install --yes curl
       - nix/install
       - run:
           command: "nix --version"
