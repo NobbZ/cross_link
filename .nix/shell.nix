@@ -13,7 +13,14 @@
   inherit (stdenv) isLinux;
 in
   mkShell {
-    packages = [elixir nil inotify-tools yamlfmt];
+    packages = [
+      # Actually developing elixir/phoenix
+      elixir
+      inotify-tools
+      # auxiliary tooling for auxiliary files
+      nil
+      yamlfmt
+    ];
 
     LANG = "en_US.UTF-8";
 
